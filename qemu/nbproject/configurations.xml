@@ -1,0 +1,2484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="block">
+        <in>accounting.c</in>
+        <in>blkdebug.c</in>
+        <in>blkreplay.c</in>
+        <in>blkverify.c</in>
+        <in>block-backend.c</in>
+        <in>bochs.c</in>
+        <in>cloop.c</in>
+        <in>commit.c</in>
+        <in>crypto.c</in>
+        <in>dirty-bitmap.c</in>
+        <in>dmg.c</in>
+        <in>io.c</in>
+        <in>mirror.c</in>
+        <in>nbd-client.c</in>
+        <in>nbd.c</in>
+        <in>null.c</in>
+        <in>parallels.c</in>
+        <in>qapi.c</in>
+        <in>qcow.c</in>
+        <in>qcow2-cache.c</in>
+        <in>qcow2-cluster.c</in>
+        <in>qcow2-refcount.c</in>
+        <in>qcow2-snapshot.c</in>
+        <in>qcow2.c</in>
+        <in>qed-check.c</in>
+        <in>qed-cluster.c</in>
+        <in>qed-gencb.c</in>
+        <in>qed-l2-cache.c</in>
+        <in>qed-table.c</in>
+        <in>qed.c</in>
+        <in>quorum.c</in>
+        <in>raw-posix.c</in>
+        <in>raw_bsd.c</in>
+        <in>sheepdog.c</in>
+        <in>snapshot.c</in>
+        <in>throttle-groups.c</in>
+        <in>vdi.c</in>
+        <in>vmdk.c</in>
+        <in>vpc.c</in>
+        <in>vvfat.c</in>
+        <in>write-threshold.c</in>
+      </df>
+      <df name="contrib">
+        <df name="ivshmem-client">
+          <in>ivshmem-client.c</in>
+          <in>main.c</in>
+        </df>
+        <df name="ivshmem-server">
+          <in>ivshmem-server.c</in>
+          <in>main.c</in>
+        </df>
+      </df>
+      <df name="crypto">
+        <in>aes.c</in>
+        <in>afsplit.c</in>
+        <in>block-luks.c</in>
+        <in>block-qcow.c</in>
+        <in>block.c</in>
+        <in>cipher.c</in>
+        <in>desrfb.c</in>
+        <in>hash-glib.c</in>
+        <in>hash.c</in>
+        <in>init.c</in>
+        <in>ivgen-essiv.c</in>
+        <in>ivgen-plain.c</in>
+        <in>ivgen-plain64.c</in>
+        <in>ivgen.c</in>
+        <in>pbkdf-stub.c</in>
+        <in>pbkdf.c</in>
+        <in>random-platform.c</in>
+        <in>secret.c</in>
+        <in>tlscreds.c</in>
+        <in>tlscredsanon.c</in>
+        <in>tlscredsx509.c</in>
+        <in>tlssession.c</in>
+        <in>xts.c</in>
+      </df>
+      <df name="disas">
+        <in>i386.c</in>
+        <in>ppc.c</in>
+      </df>
+      <df name="fpu">
+        <in>softfloat.c</in>
+      </df>
+      <df name="hw">
+        <df name="core">
+          <in>bus.c</in>
+          <in>fw-path-provider.c</in>
+          <in>hotplug.c</in>
+          <in>irq.c</in>
+          <in>qdev-properties.c</in>
+          <in>qdev.c</in>
+        </df>
+      </df>
+      <df name="io">
+        <in>channel-buffer.c</in>
+        <in>channel-command.c</in>
+        <in>channel-file.c</in>
+        <in>channel-socket.c</in>
+        <in>channel-tls.c</in>
+        <in>channel-util.c</in>
+        <in>channel-watch.c</in>
+        <in>channel-websock.c</in>
+        <in>channel.c</in>
+        <in>task.c</in>
+      </df>
+      <df name="libdecnumber">
+        <df name="dpd">
+          <in>decimal128.c</in>
+          <in>decimal32.c</in>
+          <in>decimal64.c</in>
+        </df>
+        <in>decContext.c</in>
+        <in>decNumber.c</in>
+      </df>
+      <df name="linux-user">
+        <in>elfload.c</in>
+        <in>linuxload.c</in>
+        <in>main.c</in>
+        <in>mmap.c</in>
+        <in>signal.c</in>
+        <in>strace.c</in>
+        <in>syscall.c</in>
+        <in>uaccess.c</in>
+        <in>uname.c</in>
+      </df>
+      <df name="nbd">
+        <in>client.c</in>
+        <in>common.c</in>
+        <in>server.c</in>
+      </df>
+      <df name="ppc64-linux-user">
+        <df name="trace">
+          <in>generated-helpers.c</in>
+        </df>
+        <in>gdbstub-xml.c</in>
+      </df>
+      <df name="qapi">
+        <in>opts-visitor.c</in>
+        <in>qapi-clone-visitor.c</in>
+        <in>qapi-dealloc-visitor.c</in>
+        <in>qapi-util.c</in>
+        <in>qapi-visit-core.c</in>
+        <in>qmp-dispatch.c</in>
+        <in>qmp-event.c</in>
+        <in>qmp-input-visitor.c</in>
+        <in>qmp-output-visitor.c</in>
+        <in>qmp-registry.c</in>
+        <in>string-input-visitor.c</in>
+        <in>string-output-visitor.c</in>
+      </df>
+      <df name="qga">
+        <df name="qapi-generated">
+          <in>qga-qapi-types.c</in>
+          <in>qga-qapi-visit.c</in>
+          <in>qga-qmp-marshal.c</in>
+        </df>
+        <in>channel-posix.c</in>
+        <in>commands-posix.c</in>
+        <in>commands.c</in>
+        <in>guest-agent-command-state.c</in>
+        <in>main.c</in>
+      </df>
+      <df name="qobject">
+        <in>json-lexer.c</in>
+        <in>json-parser.c</in>
+        <in>json-streamer.c</in>
+        <in>qbool.c</in>
+        <in>qdict.c</in>
+        <in>qfloat.c</in>
+        <in>qint.c</in>
+        <in>qjson.c</in>
+        <in>qlist.c</in>
+        <in>qnull.c</in>
+        <in>qobject.c</in>
+        <in>qstring.c</in>
+      </df>
+      <df name="qom">
+        <in>container.c</in>
+        <in>cpu.c</in>
+        <in>object.c</in>
+        <in>object_interfaces.c</in>
+        <in>qom-qobject.c</in>
+      </df>
+      <df name="stubs">
+        <in>arch-query-cpu-def.c</in>
+        <in>bdrv-next-monitor-owned.c</in>
+        <in>blk-commit-all.c</in>
+        <in>blockdev-close-all-bdrv-states.c</in>
+        <in>clock-warp.c</in>
+        <in>cpu-get-clock.c</in>
+        <in>cpu-get-icount.c</in>
+        <in>cpus.c</in>
+        <in>dump.c</in>
+        <in>fdset-add-fd.c</in>
+        <in>fdset-find-fd.c</in>
+        <in>fdset-get-fd.c</in>
+        <in>fdset-remove-fd.c</in>
+        <in>gdbstub.c</in>
+        <in>get-fd.c</in>
+        <in>get-next-serial.c</in>
+        <in>get-vm-name.c</in>
+        <in>iohandler.c</in>
+        <in>iothread-lock.c</in>
+        <in>ipmi.c</in>
+        <in>is-daemonized.c</in>
+        <in>kvm.c</in>
+        <in>machine-init-done.c</in>
+        <in>migr-blocker.c</in>
+        <in>mon-is-qmp.c</in>
+        <in>mon-printf.c</in>
+        <in>monitor-init.c</in>
+        <in>notify-event.c</in>
+        <in>pc_madt_cpu_entry.c</in>
+        <in>qmp_pc_dimm_device_list.c</in>
+        <in>qtest.c</in>
+        <in>replay-user.c</in>
+        <in>replay.c</in>
+        <in>reset.c</in>
+        <in>runstate-check.c</in>
+        <in>set-fd-handler.c</in>
+        <in>slirp.c</in>
+        <in>smbios_type_38.c</in>
+        <in>sysbus.c</in>
+        <in>target-get-monitor-def.c</in>
+        <in>target-monitor-defs.c</in>
+        <in>trace-control.c</in>
+        <in>uuid.c</in>
+        <in>vhost.c</in>
+        <in>vm-stop.c</in>
+        <in>vmstate.c</in>
+      </df>
+      <df name="target-ppc">
+        <in>cpu-models.c</in>
+        <in>dfp_helper.c</in>
+        <in>excp_helper.c</in>
+        <in>fpu_helper.c</in>
+        <in>gdbstub.c</in>
+        <in>int_helper.c</in>
+        <in>kvm-stub.c</in>
+        <in>mem_helper.c</in>
+        <in>misc_helper.c</in>
+        <in>timebase_helper.c</in>
+        <in>translate.c</in>
+        <in>user_only_helper.c</in>
+      </df>
+      <df name="tcg">
+        <in>optimize.c</in>
+        <in>tcg-common.c</in>
+        <in>tcg-op.c</in>
+        <in>tcg.c</in>
+      </df>
+      <df name="tests">
+        <df name="qemu-iotests">
+          <in>socket_scm_helper.c</in>
+        </df>
+      </df>
+      <df name="trace">
+        <in>control-target.c</in>
+        <in>control.c</in>
+        <in>generated-events.c</in>
+        <in>qmp.c</in>
+      </df>
+      <df name="util">
+        <in>acl.c</in>
+        <in>base64.c</in>
+        <in>bitmap.c</in>
+        <in>bitops.c</in>
+        <in>buffer.c</in>
+        <in>compatfd.c</in>
+        <in>coroutine-ucontext.c</in>
+        <in>crc32c.c</in>
+        <in>cutils.c</in>
+        <in>envlist.c</in>
+        <in>error.c</in>
+        <in>event_notifier-posix.c</in>
+        <in>fifo8.c</in>
+        <in>getauxval.c</in>
+        <in>hbitmap.c</in>
+        <in>hexdump.c</in>
+        <in>id.c</in>
+        <in>iov.c</in>
+        <in>log.c</in>
+        <in>memfd.c</in>
+        <in>mmap-alloc.c</in>
+        <in>module.c</in>
+        <in>notify.c</in>
+        <in>osdep.c</in>
+        <in>oslib-posix.c</in>
+        <in>path.c</in>
+        <in>qdist.c</in>
+        <in>qemu-config.c</in>
+        <in>qemu-coroutine-io.c</in>
+        <in>qemu-coroutine-lock.c</in>
+        <in>qemu-coroutine-sleep.c</in>
+        <in>qemu-coroutine.c</in>
+        <in>qemu-error.c</in>
+        <in>qemu-openpty.c</in>
+        <in>qemu-option.c</in>
+        <in>qemu-progress.c</in>
+        <in>qemu-sockets.c</in>
+        <in>qemu-thread-posix.c</in>
+        <in>qemu-timer-common.c</in>
+        <in>qht.c</in>
+        <in>range.c</in>
+        <in>rcu.c</in>
+        <in>readline.c</in>
+        <in>rfifolock.c</in>
+        <in>throttle.c</in>
+        <in>timed-average.c</in>
+        <in>unicode.c</in>
+        <in>uri.c</in>
+      </df>
+      <in>aio-posix.c</in>
+      <in>async.c</in>
+      <in>block.c</in>
+      <in>blockjob.c</in>
+      <in>cpu-exec-common.c</in>
+      <in>cpu-exec.c</in>
+      <in>disas.c</in>
+      <in>exec.c</in>
+      <in>gdbstub.c</in>
+      <in>iohandler.c</in>
+      <in>kvm-stub.c</in>
+      <in>main-loop.c</in>
+      <in>qapi-event.c</in>
+      <in>qapi-types.c</in>
+      <in>qapi-visit.c</in>
+      <in>qemu-bridge-helper.c</in>
+      <in>qemu-img.c</in>
+      <in>qemu-io-cmds.c</in>
+      <in>qemu-io.c</in>
+      <in>qemu-nbd.c</in>
+      <in>qemu-timer.c</in>
+      <in>qmp-introspect.c</in>
+      <in>tcg-runtime.c</in>
+      <in>thread-pool.c</in>
+      <in>thunk.c</in>
+      <in>translate-all.c</in>
+      <in>translate-common.c</in>
+      <in>user-exec.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-fPIE -m64 -fstack-protector-strong -O2 -g"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile -j4</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>tcg</pElem>
+              <pElem>tcg/i386</pElem>
+              <pElem>linux-headers</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>PIE</Elem>
+              <Elem>_FILE_OFFSET_BITS=64</Elem>
+              <Elem>_FORTIFY_SOURCE=2</Elem>
+              <Elem>_GNU_SOURCE</Elem>
+              <Elem>_LARGEFILE_SOURCE</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>./configure --extra-cflags="-g3 -gdwarf-2" --target-list=ppc64-linux-user</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="aio-posix.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="async.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="block.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="block/accounting.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/blkdebug.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/blkreplay.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/blkverify.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/block-backend.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/bochs.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/cloop.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/commit.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/crypto.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/dirty-bitmap.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/dmg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/io.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/mirror.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/nbd-client.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/nbd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/null.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/parallels.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qapi.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qcow.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qcow2-cache.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qcow2-cluster.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qcow2-refcount.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qcow2-snapshot.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qcow2.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qed-check.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qed-cluster.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qed-gencb.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qed-l2-cache.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qed-table.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/qed.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/quorum.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/raw-posix.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/raw_bsd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/sheepdog.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/snapshot.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/throttle-groups.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/vdi.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/vmdk.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/vpc.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/vvfat.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="block/write-threshold.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="blockjob.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="contrib/ivshmem-client/ivshmem-client.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="contrib/ivshmem-client/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="contrib/ivshmem-server/ivshmem-server.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="contrib/ivshmem-server/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="cpu-exec-common.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="cpu-exec.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="crypto/aes.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/afsplit.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/block-luks.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/block-qcow.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/block.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/cipher.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/desrfb.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/hash-glib.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/hash.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/init.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/ivgen-essiv.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/ivgen-plain.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/ivgen-plain64.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/ivgen.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/pbkdf-stub.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/pbkdf.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/random-platform.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/secret.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/tlscreds.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/tlscredsanon.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/tlscredsx509.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/tlssession.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="crypto/xts.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="disas.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="disas/i386.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="disas/ppc.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="exec.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <folder path="0/block">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>block</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/contrib">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/contrib/ivshmem-client">
+        <cTool>
+          <incDir>
+            <pElem>contrib/ivshmem-client</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/contrib/ivshmem-server">
+        <cTool>
+          <incDir>
+            <pElem>contrib/ivshmem-server</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/crypto">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>crypto</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/disas">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>disas</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/fpu">
+        <cTool>
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>fpu</pElem>
+            <pElem>ppc64-linux-user/fpu</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/hw">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>hw/core</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/io">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>io</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/libdecnumber">
+        <cTool>
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/libdecnumber/dpd">
+        <cTool>
+          <incDir>
+            <pElem>libdecnumber/dpd</pElem>
+            <pElem>ppc64-linux-user/libdecnumber/dpd</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/linux-user">
+        <cTool>
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>ppc64-linux-user/linux-user</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/nbd">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>nbd</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/ppc64-linux-user">
+        <cTool>
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/ppc64-linux-user/trace">
+        <cTool>
+          <incDir>
+            <pElem>ppc64-linux-user/trace</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/qapi">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>qapi</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/qga">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/qga/qapi-generated">
+        <cTool>
+          <incDir>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/qobject">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>qobject</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/qom">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>qom</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/stubs">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>stubs</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/target-ppc">
+        <cTool>
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>ppc64-linux-user/target-ppc</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/tcg">
+        <cTool>
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>ppc64-linux-user/tcg</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/tests">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>tests/qemu-iotests</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/util">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>util</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="fpu/softfloat.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="gdbstub.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="hw/core/bus.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="hw/core/fw-path-provider.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="hw/core/hotplug.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="hw/core/irq.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="hw/core/qdev-properties.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="hw/core/qdev.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-buffer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-command.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-file.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-socket.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-tls.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-util.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-watch.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel-websock.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/channel.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="io/task.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="iohandler.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="kvm-stub.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="libdecnumber/decContext.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>libdecnumber</pElem>
+            <pElem>ppc64-linux-user/libdecnumber</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="libdecnumber/decNumber.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>libdecnumber</pElem>
+            <pElem>ppc64-linux-user/libdecnumber</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="libdecnumber/dpd/decimal128.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="libdecnumber/dpd/decimal32.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="libdecnumber/dpd/decimal64.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/elfload.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/linuxload.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/mmap.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/signal.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/strace.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/syscall.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/uaccess.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="linux-user/uname.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="main-loop.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="nbd/client.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="nbd/common.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="nbd/server.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="ppc64-linux-user/gdbstub-xml.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="ppc64-linux-user/trace/generated-helpers.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi-event.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qapi-types.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qapi-visit.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qapi/opts-visitor.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qapi-clone-visitor.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qapi-dealloc-visitor.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qapi-util.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qapi-visit-core.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qmp-dispatch.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qmp-event.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qmp-input-visitor.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qmp-output-visitor.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/qmp-registry.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/string-input-visitor.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qapi/string-output-visitor.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qemu-bridge-helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qemu-img.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qemu-io-cmds.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qemu-io.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qemu-nbd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qemu-timer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qga/channel-posix.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>qga</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qga/commands-posix.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>qga</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qga/commands.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>qga</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qga/guest-agent-command-state.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>qga</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qga/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>qga</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qga/qapi-generated/qga-qapi-types.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qga/qapi-generated/qga-qapi-visit.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qga/qapi-generated/qga-qmp-marshal.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qmp-introspect.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="qobject/json-lexer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/json-parser.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/json-streamer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qbool.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qdict.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qfloat.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qint.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qjson.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qlist.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qnull.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qobject.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qobject/qstring.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qom/container.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qom/cpu.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qom/object.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qom/object_interfaces.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="qom/qom-qobject.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/arch-query-cpu-def.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/bdrv-next-monitor-owned.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/blk-commit-all.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/blockdev-close-all-bdrv-states.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/clock-warp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/cpu-get-clock.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/cpu-get-icount.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/cpus.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/dump.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/fdset-add-fd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/fdset-find-fd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/fdset-get-fd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/fdset-remove-fd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/gdbstub.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/get-fd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/get-next-serial.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/get-vm-name.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/iohandler.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/iothread-lock.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/ipmi.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/is-daemonized.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/kvm.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/machine-init-done.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/migr-blocker.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/mon-is-qmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/mon-printf.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/monitor-init.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/notify-event.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/pc_madt_cpu_entry.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/qmp_pc_dimm_device_list.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/qtest.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/replay-user.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/replay.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/reset.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/runstate-check.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/set-fd-handler.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/slirp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/smbios_type_38.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/sysbus.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/target-get-monitor-def.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/target-monitor-defs.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/trace-control.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/uuid.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/vhost.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/vm-stop.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="stubs/vmstate.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/cpu-models.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/dfp_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/excp_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/fpu_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/gdbstub.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/int_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/kvm-stub.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/mem_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/misc_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/timebase_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/translate.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="target-ppc/user_only_helper.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="tcg-runtime.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="tcg/optimize.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="tcg/tcg-common.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="tcg/tcg-op.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="tcg/tcg.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="tests/qemu-iotests/socket_scm_helper.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="thread-pool.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="thunk.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="trace/control-target.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>trace</pElem>
+            <pElem>ppc64-linux-user/trace</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="trace/control.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>trace</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="trace/generated-events.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>trace</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="trace/qmp.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>trace</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>tests</pElem>
+            <pElem>qga/qapi-generated</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="translate-all.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="translate-common.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="user-exec.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>ppc64-linux-user</pElem>
+            <pElem>.</pElem>
+            <pElem>include</pElem>
+            <pElem>/usr/include/pixman-1</pElem>
+            <pElem>/usr/include/libpng12</pElem>
+            <pElem>target-ppc</pElem>
+            <pElem>linux-user/ppc</pElem>
+            <pElem>linux-user/host/x86_64</pElem>
+            <pElem>linux-user</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NEED_CPU_H</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="util/acl.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/base64.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/bitmap.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/bitops.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/buffer.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/compatfd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/coroutine-ucontext.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/crc32c.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/cutils.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/envlist.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/error.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/event_notifier-posix.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/fifo8.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/getauxval.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/hbitmap.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/hexdump.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/id.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/iov.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/log.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/memfd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/mmap-alloc.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/module.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>CONFIG_BLOCK_MODULES="block-dmg", NULL</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="util/notify.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/osdep.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/oslib-posix.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/path.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qdist.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-config.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-coroutine-io.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-coroutine-lock.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-coroutine-sleep.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-coroutine.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-error.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-openpty.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-option.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-progress.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-sockets.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-thread-posix.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qemu-timer-common.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/qht.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/range.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/rcu.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/readline.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/rfifolock.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/throttle.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/timed-average.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/unicode.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="util/uri.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

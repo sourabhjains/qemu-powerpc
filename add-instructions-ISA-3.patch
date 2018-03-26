@@ -1,0 +1,477 @@
+diff --git a/Makefile.target b/Makefile.target
+index a440bcb..f598473 100644
+--- a/Makefile.target
++++ b/Makefile.target
+@@ -9,9 +9,9 @@ include $(SRC_PATH)/rules.mak
+ 
+ $(call set-vpath, $(SRC_PATH):$(BUILD_DIR))
+ ifdef CONFIG_LINUX
+-QEMU_CFLAGS += -I../linux-headers
++QEMU_CFLAGS += -I../linux-headers -g3
+ endif
+-QEMU_CFLAGS += -I.. -I$(SRC_PATH)/target-$(TARGET_BASE_ARCH) -DNEED_CPU_H
++QEMU_CFLAGS += -I.. -I$(SRC_PATH)/target-$(TARGET_BASE_ARCH) -DNEED_CPU_H -g3
+ 
+ QEMU_CFLAGS+=-I$(SRC_PATH)/include
+ 
+diff --git a/target-ppc/helper.h b/target-ppc/helper.h
+index 1f5cfd0..ec50b02 100644
+--- a/target-ppc/helper.h
++++ b/target-ppc/helper.h
+@@ -38,12 +38,18 @@ DEF_HELPER_4(divweu, tl, env, tl, tl, i32)
+ DEF_HELPER_4(divwe, tl, env, tl, tl, i32)
+ 
+ DEF_HELPER_FLAGS_1(cntlzw, TCG_CALL_NO_RWG_SE, tl, tl)
++
++DEF_HELPER_FLAGS_1(cnttzw, TCG_CALL_NO_RWG_SE, tl, tl)
++
+ DEF_HELPER_FLAGS_1(popcntb, TCG_CALL_NO_RWG_SE, tl, tl)
+ DEF_HELPER_FLAGS_1(popcntw, TCG_CALL_NO_RWG_SE, tl, tl)
+ DEF_HELPER_FLAGS_2(cmpb, TCG_CALL_NO_RWG_SE, tl, tl, tl)
+ DEF_HELPER_3(sraw, tl, env, tl, tl)
+ #if defined(TARGET_PPC64)
+ DEF_HELPER_FLAGS_1(cntlzd, TCG_CALL_NO_RWG_SE, tl, tl)
++
++DEF_HELPER_FLAGS_1(cnttzd, TCG_CALL_NO_RWG_SE, tl, tl)
++
+ DEF_HELPER_FLAGS_1(popcntd, TCG_CALL_NO_RWG_SE, tl, tl)
+ DEF_HELPER_FLAGS_2(bpermd, TCG_CALL_NO_RWG_SE, i64, i64, i64)
+ DEF_HELPER_3(srad, tl, env, tl, tl)
+@@ -51,6 +57,7 @@ DEF_HELPER_3(srad, tl, env, tl, tl)
+ 
+ DEF_HELPER_FLAGS_1(cntlsw32, TCG_CALL_NO_RWG_SE, i32, i32)
+ DEF_HELPER_FLAGS_1(cntlzw32, TCG_CALL_NO_RWG_SE, i32, i32)
++DEF_HELPER_FLAGS_1(cnttzw32, TCG_CALL_NO_RWG_SE, i32, i32)
+ DEF_HELPER_FLAGS_2(brinc, TCG_CALL_NO_RWG_SE, tl, tl, tl)
+ 
+ DEF_HELPER_1(float_check_status, void, env)
+@@ -137,7 +144,13 @@ DEF_HELPER_3(vmaxud, void, avr, avr, avr)
+ DEF_HELPER_4(vcmpequb, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpequh, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpequw, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpneb, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpneh, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnew, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpequd, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnezb, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnezh, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnezw, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpgtub, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpgtuh, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpgtuw, void, env, avr, avr, avr)
+@@ -153,7 +166,13 @@ DEF_HELPER_4(vcmpbfp, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpequb_dot, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpequh_dot, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpequw_dot, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpneb_dot, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpneh_dot, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnew_dot, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpequd_dot, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnezb_dot, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnezh_dot, void, env, avr, avr, avr)
++DEF_HELPER_4(vcmpnezw_dot, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpgtub_dot, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpgtuh_dot, void, env, avr, avr, avr)
+ DEF_HELPER_4(vcmpgtuw_dot, void, env, avr, avr, avr)
+diff --git a/target-ppc/int_helper.c b/target-ppc/int_helper.c
+index 7445376..96c6a9d 100644
+--- a/target-ppc/int_helper.c
++++ b/target-ppc/int_helper.c
+@@ -145,11 +145,24 @@ target_ulong helper_cntlzw(target_ulong t)
+     return clz32(t);
+ }
+ 
++target_ulong helper_cnttzw(target_ulong t)
++{
++    return clz32(t);
++} 
++
+ #if defined(TARGET_PPC64)
+ target_ulong helper_cntlzd(target_ulong t)
+ {
+     return clz64(t);
+ }
++
++
++target_ulong helper_cnttzd(target_ulong t)
++{
++    return ctz64(t);
++}
++
++
+ #endif
+ 
+ #if defined(TARGET_PPC64)
+@@ -269,6 +282,7 @@ target_ulong helper_popcntw(target_ulong val)
+ 
+ target_ulong helper_popcntd(target_ulong val)
+ {
++    printf("Inside popcntd\n");
+     return ctpop64(val);
+ }
+ #else
+@@ -663,6 +677,110 @@ VCMP(gtsd, >, s64)
+ #undef VCMP_DO
+ #undef VCMP
+ 
++#define VCMPNEZ_DO(suffix, element, record)                         \
++void helper_vcmpnez##suffix(CPUPPCState *env, ppc_avr_t *r,         \
++                            ppc_avr_t *a, ppc_avr_t *b)                 \
++{                                                                       \
++    uint64_t ones = (uint64_t)-1;                                       \
++    uint64_t all = ones;                                                \
++    uint64_t none = 0;                                                  \
++    int i;                                                              \
++                                                                        \
++    for (i = 0; i < ARRAY_SIZE(r->element); i++) {                      \
++        uint64_t result = ((a->element[i] == 0)                         \
++                           || (b->element[i] == 0)                      \
++                           || (a->element[i] != b->element[i]) ?        \
++                           ones : 0x0);                                 \
++        switch (sizeof(a->element[0])) {                                \
++        case 8:                                                         \
++            r->u64[i] = result;                                         \
++            break;                                                      \
++        case 4:                                                         \
++            r->u32[i] = result;                                         \
++            break;                                                      \
++        case 2:                                                         \
++            r->u16[i] = result;                                         \
++            break;                                                      \
++        case 1:                                                         \
++            r->u8[i] = result;                                          \
++            break;                                                      \
++        }                                                               \
++        all &= result;                                                  \
++        none |= result;                                                 \
++    }                                                                   \
++    if (record) {                                                       \
++        env->crf[6] = ((all != 0) << 3) | ((none == 0) << 1);           \
++    }                                                                   \
++}
++
++/* VCMPNEZ - Vector compare not equal to zero
++ *   suffix  - instruction mnemonic suffix (b: byte, h: halfword, w: word)
++ *   element - element type to access from vector
++ */
++#define VCMPNEZ(suffix, element)         \
++    VCMPNEZ_DO(suffix, element, 0)       \
++    VCMPNEZ_DO(suffix##_dot, element, 1)
++VCMPNEZ(b, u8)
++VCMPNEZ(h, u16)
++VCMPNEZ(w, u32)
++#undef VCMPNEZ_DO
++#undef VCMPNEZ
++
++
++
++
++
++#define VCMPNE_DO(suffix, element, record)                         \
++void helper_vcmpne##suffix(CPUPPCState *env, ppc_avr_t *r,         \
++                            ppc_avr_t *a, ppc_avr_t *b)                 \
++{                                                                       \
++    uint64_t ones = (uint64_t)-1;                                       \
++    uint64_t all = ones;                                                \
++    uint64_t none = 0;                                                  \
++    int i;                                                              \
++                                                                        \
++    for (i = 0; i < ARRAY_SIZE(r->element); i++) {                      \
++        uint64_t result = ((a->element[i] == 0)                         \
++                           || (b->element[i] == 0)                      \
++                           || (a->element[i] != b->element[i]) ?        \
++                           ones : 0x0);                                 \
++        switch (sizeof(a->element[0])) {                                \
++        case 8:                                                         \
++            r->u64[i] = result;                                         \
++            break;                                                      \
++        case 4:                                                         \
++            r->u32[i] = result;                                         \
++            break;                                                      \
++        case 2:                                                         \
++            r->u16[i] = result;                                         \
++            break;                                                      \
++        case 1:                                                         \
++            r->u8[i] = result;                                          \
++            break;                                                      \
++        }                                                               \
++        all &= result;                                                  \
++        none |= result;                                                 \
++    }                                                                   \
++    if (record) {                                                       \
++        env->crf[6] = ((all != 0) << 3) | ((none == 0) << 1);           \
++    }                                                                   \
++}
++
++/* VCMPNE - Vector compare not equal to zero
++ *   suffix  - instruction mnemonic suffix (b: byte, h: halfword, w: word)
++ *   element - element type to access from vector
++ */
++#define VCMPNE(suffix, element)         \
++    VCMPNE_DO(suffix, element, 0)       \
++    VCMPNE_DO(suffix##_dot, element, 1)
++VCMPNE(b, u8)
++VCMPNE(h, u16)
++VCMPNE(w, u32)
++#undef VCMPNE_DO
++#undef VCMPNE
++
++
++
+ #define VCMPFP_DO(suffix, compare, order, record)                       \
+     void helper_vcmp##suffix(CPUPPCState *env, ppc_avr_t *r,            \
+                              ppc_avr_t *a, ppc_avr_t *b)                \
+@@ -2532,6 +2650,12 @@ uint32_t helper_cntlzw32(uint32_t val)
+     return clz32(val);
+ }
+ 
++uint32_t helper_cnttzw32(uint32_t val)
++{
++    return clz32(val);
++}  
++
++
+ /* 440 specific */
+ target_ulong helper_dlmzb(CPUPPCState *env, target_ulong high,
+                           target_ulong low, uint32_t update_Rc)
+diff --git a/target-ppc/translate.c b/target-ppc/translate.c
+index 92030b6..2d7407b 100644
+--- a/target-ppc/translate.c
++++ b/target-ppc/translate.c
+@@ -788,6 +788,27 @@ static void gen_cmpl(DisasContext *ctx)
+     }
+ }
+ 
++
++/* cmpl */
++static void gen_cmprb(DisasContext *ctx)
++{
++   printf("Instruction added");
++   printf("BF = %u, L = %u, RA = %u, RB = %u\n",
++           crfD(ctx->opcode),
++           ((ctx->opcode) & 0x00200000) ? 1 : 0,
++           rA(ctx->opcode),
++           rB(ctx->opcode)
++   );
++
++   /* if ((ctx->opcode & 0x00200000) && (ctx->insns_flags & PPC_64B)) {
++        gen_op_cmp(cpu_gpr[rA(ctx->opcode)], cpu_gpr[rB(ctx->opcode)],
++                   0, crfD(ctx->opcode));
++    } else {
++        gen_op_cmp32(cpu_gpr[rA(ctx->opcode)], cpu_gpr[rB(ctx->opcode)],
++                     0, crfD(ctx->opcode));
++    }*/
++}
++
+ /* cmpli */
+ static void gen_cmpli(DisasContext *ctx)
+ {
+@@ -1428,6 +1449,21 @@ static void gen_cntlzw(DisasContext *ctx)
+     if (unlikely(Rc(ctx->opcode) != 0))
+         gen_set_Rc0(ctx, cpu_gpr[rA(ctx->opcode)]);
+ }
++
++
++
++/* cnttzw */
++
++static void gen_cnttzw(DisasContext *ctx)
++{
++    printf("cnttzw deocoded \n");
++    gen_helper_cnttzw(cpu_gpr[rA(ctx->opcode)], cpu_gpr[rS(ctx->opcode)]);
++    if (unlikely(Rc(ctx->opcode) != 0))
++        gen_set_Rc0(ctx, cpu_gpr[rA(ctx->opcode)]); 
++}
++
++
++
+ /* eqv & eqv. */
+ GEN_LOGICAL2(eqv, tcg_gen_eqv_tl, 0x08, PPC_INTEGER);
+ /* extsb & extsb. */
+@@ -1667,7 +1703,20 @@ static void gen_cntlzd(DisasContext *ctx)
+     gen_helper_cntlzd(cpu_gpr[rA(ctx->opcode)], cpu_gpr[rS(ctx->opcode)]);
+     if (unlikely(Rc(ctx->opcode) != 0))
+         gen_set_Rc0(ctx, cpu_gpr[rA(ctx->opcode)]);
++
++}
++
++
++/* cnttzd  */
++static void gen_cnttzd(DisasContext *ctx)
++{
++    gen_helper_cnttzd(cpu_gpr[rA(ctx->opcode)], cpu_gpr[rS(ctx->opcode)]);
++    if (unlikely(Rc(ctx->opcode) != 0)) {
++        gen_set_Rc0(ctx, cpu_gpr[rA(ctx->opcode)]);
++    }
+ }
++
++
+ #endif
+ 
+ /***                             Integer rotate                            ***/
+@@ -4686,6 +4735,47 @@ static void gen_mtspr(DisasContext *ctx)
+ 
+ /***                         Cache management                              ***/
+ 
++
++/*#if defined(TARGET_PPC64)
++ setb 
++static void gen_setb(DisasContext *ctx)
++{
++    TCGLabel *l1 = gen_new_label();
++    TCGLabel *l2 = gen_new_label();
++    TCGLabel *out = gen_new_label();
++    TCGv_i32 t0 = tcg_temp_local_new_i32();
++    TCGv_i64 ret = tcg_temp_local_new_i64();
++    int crf = crfS(ctx->opcode);
++
++    tcg_gen_andi_i32(t0, cpu_crf[crf], 0x3);
++    tcg_gen_brcondi_i32(TCG_COND_EQ, t0, 0, l1);
++    tcg_gen_andi_i32(t0, cpu_crf[crf], 0x1);
++    tcg_gen_brcondi_i32(TCG_COND_EQ, t0, 1, l2);
++    tcg_gen_movi_i64(cpu_gpr[rD(ctx->opcode)], 1);
++    tcg_gen_br(out);
++    gen_set_label(l2);
++    tcg_gen_movi_i64(cpu_gpr[rD(ctx->opcode)], -1);
++    tcg_gen_br(out);
++    gen_set_label(l1);
++    tcg_gen_movi_i64(cpu_gpr[rD(ctx->opcode)], 0);
++    gen_set_label(out);
++
++    tcg_temp_free_i32(t0);
++    tcg_temp_free_i64(ret);
++}
++#endif  
++*/
++
++
++
++
++
++
++
++
++
++
++
+ /* dcbf */
+ static void gen_dcbf(DisasContext *ctx)
+ {
+@@ -4698,6 +4788,23 @@ static void gen_dcbf(DisasContext *ctx)
+     tcg_temp_free(t0);
+ }
+ 
++/* copy */
++static void gen_copy(DisasContext *ctx)
++{
++    
++
++     printf("Instruction Decoded");
++    /* XXX: specification says this is treated as a load by the MMU */
++    /*TCGv t0;
++    gen_set_access_type(ctx, ACCESS_CACHE);
++    t0 = tcg_temp_new();
++    gen_addr_reg_index(ctx, t0);
++    gen_qemu_ld8u(ctx, t0, t0);
++    tcg_temp_free(t0); */
++}
++
++
++
+ /* dcbi (Supervisor only) */
+ static void gen_dcbi(DisasContext *ctx)
+ {
+@@ -7315,10 +7422,17 @@ static void glue(gen_, name0##_##name1)(DisasContext *ctx)             \
+     }                                                                  \
+ }
+ 
++
++GEN_VXRFORM(vcmpneb, 3, 0)
++GEN_VXRFORM(vcmpneh, 3, 1)
++GEN_VXRFORM(vcmpnew, 3, 2)
+ GEN_VXRFORM(vcmpequb, 3, 0)
+ GEN_VXRFORM(vcmpequh, 3, 1)
+ GEN_VXRFORM(vcmpequw, 3, 2)
+ GEN_VXRFORM(vcmpequd, 3, 3)
++GEN_VXRFORM(vcmpnezb, 3, 4)
++GEN_VXRFORM(vcmpnezh, 3, 5)
++GEN_VXRFORM(vcmpnezw, 3, 6)
+ GEN_VXRFORM(vcmpgtsb, 3, 12)
+ GEN_VXRFORM(vcmpgtsh, 3, 13)
+ GEN_VXRFORM(vcmpgtsw, 3, 14)
+@@ -9786,6 +9900,13 @@ GEN_SPE(efdctsiz,  speundef,  0x1D, 0x0B, 0x00180000, 0xFFFFFFFF, PPC_SPE_DOUBLE
+ GEN_SPE(efdtstgt,  efdtstlt,  0x1E, 0x0B, 0x00600000, 0x00600000, PPC_SPE_DOUBLE); //
+ GEN_SPE(efdtsteq,  speundef,  0x1F, 0x0B, 0x00600000, 0xFFFFFFFF, PPC_SPE_DOUBLE); //
+ 
++
++
++static void gen_darn(DisasContext *ctx)
++{
++    printf("Done");
++} 
++
+ static void gen_tbegin(DisasContext *ctx)
+ {
+     if (unlikely(!ctx->tm_enabled)) {
+@@ -9870,6 +9991,8 @@ GEN_HANDLER(invalid, 0x00, 0x00, 0x00, 0xFFFFFFFF, PPC_NONE),
+ GEN_HANDLER(cmp, 0x1F, 0x00, 0x00, 0x00400000, PPC_INTEGER),
+ GEN_HANDLER(cmpi, 0x0B, 0xFF, 0xFF, 0x00400000, PPC_INTEGER),
+ GEN_HANDLER(cmpl, 0x1F, 0x00, 0x01, 0x00400000, PPC_INTEGER),
++GEN_HANDLER(cmprb, 0x1F, 0x00, 0x06, 0x00400000, PPC_INTEGER),
++
+ GEN_HANDLER(cmpli, 0x0A, 0xFF, 0xFF, 0x00400000, PPC_INTEGER),
+ GEN_HANDLER_E(cmpb, 0x1F, 0x1C, 0x0F, 0x00000001, PPC_NONE, PPC2_ISA205),
+ GEN_HANDLER(isel, 0x1F, 0x0F, 0xFF, 0x00000001, PPC_ISEL),
+@@ -9891,6 +10014,9 @@ GEN_HANDLER(subfic, 0x08, 0xFF, 0xFF, 0x00000000, PPC_INTEGER),
+ GEN_HANDLER2(andi_, "andi.", 0x1C, 0xFF, 0xFF, 0x00000000, PPC_INTEGER),
+ GEN_HANDLER2(andis_, "andis.", 0x1D, 0xFF, 0xFF, 0x00000000, PPC_INTEGER),
+ GEN_HANDLER(cntlzw, 0x1F, 0x1A, 0x00, 0x00000000, PPC_INTEGER),
++
++GEN_HANDLER(cnttzw, 0x1F, 0x1A, 0x10, 0x0000F800, PPC_INTEGER),
++
+ GEN_HANDLER(or, 0x1F, 0x1C, 0x0D, 0x00000000, PPC_INTEGER),
+ GEN_HANDLER(xor, 0x1F, 0x1C, 0x09, 0x00000000, PPC_INTEGER),
+ GEN_HANDLER(ori, 0x18, 0xFF, 0xFF, 0x00000000, PPC_INTEGER),
+@@ -9903,6 +10029,10 @@ GEN_HANDLER_E(prtyw, 0x1F, 0x1A, 0x04, 0x0000F801, PPC_NONE, PPC2_ISA205),
+ #if defined(TARGET_PPC64)
+ GEN_HANDLER(popcntd, 0x1F, 0x1A, 0x0F, 0x0000F801, PPC_POPCNTWD),
+ GEN_HANDLER(cntlzd, 0x1F, 0x1A, 0x01, 0x00000000, PPC_64B),
++
++GEN_HANDLER(cnttzd, 0x1F, 0x1A, 0x11, 0x00000000, PPC_64B),
++
++
+ GEN_HANDLER_E(prtyd, 0x1F, 0x1A, 0x05, 0x0000F801, PPC_NONE, PPC2_ISA205),
+ GEN_HANDLER_E(bpermd, 0x1F, 0x1C, 0x07, 0x00000001, PPC_NONE, PPC2_PERM_ISA206),
+ #endif
+@@ -9995,7 +10125,14 @@ GEN_HANDLER(mftb, 0x1F, 0x13, 0x0B, 0x00000001, PPC_MFTB),
+ GEN_HANDLER(mtcrf, 0x1F, 0x10, 0x04, 0x00000801, PPC_MISC),
+ #if defined(TARGET_PPC64)
+ GEN_HANDLER(mtmsrd, 0x1F, 0x12, 0x05, 0x001EF801, PPC_64B),
++GEN_HANDLER(darn, 0x1F, 0x13, 0x17, 0x001CF800, PPC_INTEGER),
++
++GEN_HANDLER(copy, 0x1F, 0x06, 0x18, 0x03C00000, PPC_INTEGER),
++// GEN_HANDLER_E(setb, 0x1F, 0x00, 0x04, 0x0003F801, PPC_NONE, PPC2_ISA300)
+ #endif
++
++
++
+ GEN_HANDLER(mtmsr, 0x1F, 0x12, 0x04, 0x001EF801, PPC_MISC),
+ GEN_HANDLER(mtspr, 0x1F, 0x13, 0x0E, 0x00000000, PPC_MISC),
+ GEN_HANDLER(dcbf, 0x1F, 0x16, 0x02, 0x03C00001, PPC_CACHE),
+@@ -10678,9 +10815,16 @@ GEN_VXFORM(vminfp, 5, 17),
+ #define GEN_VXRFORM(name, opc2, opc3)                                \
+     GEN_VXRFORM1(name, name, #name, opc2, opc3)                      \
+     GEN_VXRFORM1(name##_dot, name##_, #name ".", opc2, (opc3 | (0x1 << 4)))
++
++GEN_VXRFORM(vcmpneb, 3, 0)
++GEN_VXRFORM(vcmpneh, 3, 1)
++GEN_VXRFORM(vcmpnew, 3, 2)
+ GEN_VXRFORM(vcmpequb, 3, 0)
+ GEN_VXRFORM(vcmpequh, 3, 1)
+ GEN_VXRFORM(vcmpequw, 3, 2)
++GEN_VXRFORM(vcmpnezb, 3, 4)
++GEN_VXRFORM(vcmpnezh, 3, 5)
++GEN_VXRFORM(vcmpnezw, 3, 6)
+ GEN_VXRFORM(vcmpgtsb, 3, 12)
+ GEN_VXRFORM(vcmpgtsh, 3, 13)
+ GEN_VXRFORM(vcmpgtsw, 3, 14)
